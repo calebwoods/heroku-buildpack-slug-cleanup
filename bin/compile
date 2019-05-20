@@ -3,5 +3,5 @@
 
 BUILD_DIR=$1
 
-echo "-----> Deleting the node_modules directory"
+echo "-----> Deleting the app/assets directory"
 rm -rf $BUILD_DIR/app/assets
