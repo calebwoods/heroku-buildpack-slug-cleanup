@@ -1,13 +1,13 @@
 # Heroku Buildpack: app/assets Cleanup
 
-### Delete the app/assets directory
+### Delete app/assets and node_modules folder
 
-After assets are precompiled, they are moved to the `public/assets` directory. `app/assets` is not longer required, deleting this frees up space to get around the Heroku slug size limit
+After assets are precompiled, they are moved to the `public/assets` directory. `app/assets/` and `node_modules/` is not longer required, deleting this frees up space to get around the Heroku slug size limit
 
 ## Usage
 ```bash
-$ heroku buildpacks -a barkbox-dev-pr-6327
-=== barkbox-dev-pr-6327 Buildpack URLs
+$ heroku buildpacks -a barkbox-dev
+=== barkbox-dev Buildpack URLs
 1. https://github.com/DataDog/heroku-buildpack-datadog.git
 2. https://github.com/timshadel/heroku-buildpack-github-netrc.git
 3. heroku/nodejs
@@ -16,12 +16,12 @@ $ heroku buildpacks -a barkbox-dev-pr-6327
 
 Add this to the last step.
 ```bash
-$ heroku buildpacks:add --index 5 https://github.com/barkbox/heroku-buildpack-slug-cleanup -a barkbox-dev-pr-6327
+$ heroku buildpacks:add --index 5 https://github.com/barkbox/heroku-buildpack-slug-cleanup#v0.2 -a barkbox-dev
 
-Buildpack added. Next release on barkbox-dev-pr-6327 will use:
+Buildpack added. Next release on barkbox-dev will use:
   1. https://github.com/DataDog/heroku-buildpack-datadog.git
   2. https://github.com/timshadel/heroku-buildpack-github-netrc.git
   3. heroku/nodejs
   4. heroku/ruby
-  5. https://github.com/barkbox/heroku-buildpack-slug-cleanup.git
+  5. https://github.com/barkbox/heroku-buildpack-slug-cleanup.git#v0.2
 ```
