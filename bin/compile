@@ -8,5 +8,5 @@ rm -rf $BUILD_DIR/app/assets
 echo "-----> Deleting node_modules"
 rm -rf $BUILD_DIR/node_modules
 echo "-----> Deleting static webpack assets"
-rm -rf $BUILD_DIR/javascript/images
-rm -rf $BUILD_DIR/javascript/video
+rm -rf $BUILD_DIR/app/javascript/images
+rm -rf $BUILD_DIR/app/javascript/video
