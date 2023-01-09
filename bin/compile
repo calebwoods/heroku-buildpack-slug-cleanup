@@ -3,10 +3,11 @@
 
 BUILD_DIR=$1
 
-echo "-----> Deleting the app/assets directory"
-rm -rf $BUILD_DIR/app/assets
+# Cannot remove app/assets/config/manifest.js or the
+# release phase of review applications will fail.
+echo "-----> Deleting the nested app/assets directories"
+rm -rf $BUILD_DIR/app/assets/images
+rm -rf $BUILD_DIR/app/assets/video
+rm -rf $BUILD_DIR/app/assets/builds
 echo "-----> Deleting node_modules"
 rm -rf $BUILD_DIR/node_modules
-echo "-----> Deleting static webpack assets"
-rm -rf $BUILD_DIR/app/javascript/images
-rm -rf $BUILD_DIR/app/javascript/video
