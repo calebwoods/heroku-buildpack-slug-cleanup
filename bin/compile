@@ -6,8 +6,8 @@ BUILD_DIR=$1
 # Cannot remove app/assets/config/manifest.js or the
 # release phase of review applications will fail.
 echo "-----> Deleting the nested app/assets directories"
-rm -rf $BUILD_DIR/app/assets/images
-rm -rf $BUILD_DIR/app/assets/video
-rm -rf $BUILD_DIR/app/assets/builds
+# rm -rf $BUILD_DIR/app/assets/images
+# rm -rf $BUILD_DIR/app/assets/video
+# rm -rf $BUILD_DIR/app/assets/builds
 echo "-----> Deleting node_modules"
 rm -rf $BUILD_DIR/node_modules
