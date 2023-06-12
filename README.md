@@ -16,12 +16,12 @@ $ heroku buildpacks -a barkbox-dev
 
 Add this to the last step.
 ```bash
-$ heroku buildpacks:add --index 5 https://github.com/barkbox/heroku-buildpack-slug-cleanup#v0.2 -a barkbox-dev
+$ heroku buildpacks:add --index 5 https://github.com/CloudSecurityAllianceCI/heroku-buildpack-slug-cleanup.git -a barkbox-dev
 
 Buildpack added. Next release on barkbox-dev will use:
   1. https://github.com/DataDog/heroku-buildpack-datadog.git
   2. https://github.com/timshadel/heroku-buildpack-github-netrc.git
   3. heroku/nodejs
   4. heroku/ruby
-  5. https://github.com/barkbox/heroku-buildpack-slug-cleanup.git#v0.2
+  5. https://github.com/CloudSecurityAllianceCI/heroku-buildpack-slug-cleanup.git
 ```
